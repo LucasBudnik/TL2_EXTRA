@@ -23,7 +23,7 @@ public class Main {
 		s.addPlanet(new Planet("URANO", 25, Tipo.GASEOSO, 50724L, (long) 2871));
 		s.addPlanet(new Planet("NEPTUNO", 14, Tipo.GASEOSO, 49244L, (long) 4498));
 
-		Menu.menu(s);
+		Menu.menuPrincipal(s);
 	}
 
 

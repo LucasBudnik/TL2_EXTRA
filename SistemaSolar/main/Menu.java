@@ -9,7 +9,7 @@ import telescopio.Telescopio;
 public class Menu {
 	/*------------------------------------------------------------------
 	 * Menu Principal*/
-	public static void menu(SistemaSolar s) {
+	public static void menuPrincipal(SistemaSolar s) {
 		int n = 0;
 		Scanner in = new Scanner(System.in);
 		do {
@@ -25,7 +25,7 @@ public class Menu {
 					break;
 
 				case 2:
-					menu2(in, s);
+					menuTelescopio(in, s);
 					break;
 				default:
 					System.out.println("Error en la seleccion. Vuelva a intentar...");
@@ -39,7 +39,7 @@ public class Menu {
 
 	/*------------------------------------------------------------------
 	 * Seccion Telescopio*/
-	public static void menu2(Scanner in, SistemaSolar s) {
+	public static void menuTelescopio(Scanner in, SistemaSolar s) {
 		int n1;
 		Planet p = new Planet();
 		do {
@@ -49,7 +49,7 @@ public class Menu {
 			n1 = in.nextInt();
 			if (n1 != 0) {
 				if (n1 == 1 || n1 == 2)
-					p = MenuPlanet(in, s);
+					p = MenuPlanetas(in, s);
 				switch (n1) {
 				case 1:
 					System.out.println("Distancia Planeta: ");
@@ -71,7 +71,7 @@ public class Menu {
 
 	/*------------------------------------------------------------------
 	 * Seleccion de Planeta*/
-	public static Planet MenuPlanet(Scanner in, SistemaSolar s) {
+	public static Planet MenuPlanetas(Scanner in, SistemaSolar s) {
 		int n2;
 		do {
 			System.out.println("selecciones planeta\n" + "0:MERCURIO,\n" + "1:VENUS\n" + "2:MARTE\n" + "3:TIERRA\n"
