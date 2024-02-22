@@ -1,13 +1,16 @@
-// creamos un telescopipo
+// creamos un telescopio
 
 package telescopio;
 
 import planeta.Planeta;
 
 public class Telescopio {
-
+	/*------------------------------------------------------------------
+	 * VARIABLES*/
 	private static Telescopio telescopio;
 
+	/*------------------------------------------------------------------
+	 * CONSTRUCTORES*/
 	private Telescopio() {
 
 	}
@@ -18,12 +21,17 @@ public class Telescopio {
 		}
 		return telescopio;
 	}
-
+	
+	/*------------------------------------------------------------------
+	 * OBTENER DISTANCIA RESPECTO DEL SOL DE UN PLANETA DADO*/
 	public static void distanciaPlaneta(Planeta p) {
 		System.out
 				.println("La Distancia al Sol de " + p.getNombre() + " es de " + p.getDistancia() + " millones de km");
 	}
-
+	
+	
+	/*------------------------------------------------------------------
+	 * OBTENER TIPO DE PLANETA DE UN PLANETA DADO*/
 	public static void tipoPlaneta(Planeta p) {
 		if (p != null) {
 			switch (p.getTipo()) {

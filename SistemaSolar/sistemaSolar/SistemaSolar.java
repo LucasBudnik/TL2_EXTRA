@@ -5,19 +5,24 @@ package sistemaSolar;
 import planeta.Planeta;
 
 public final class SistemaSolar {
-	// el sistema solar tiene 8 planetas
+	
 	private final int PLANETAS = 8;
-	// el sistema solar es singleton, por lo tanto no se puede instanciar mas de una vez
+	
 	private static SistemaSolar INSTANCE;
-	// creamos un vector de planetas vacio
+	
 	private Planeta[] planet = new Planeta[PLANETAS];
-	// creamos un indice vacio
 	private int indice = 0;
 
+	
+	/*------------------------------------------------------------------
+	 * CONSTRUCTORES*/
 	private SistemaSolar() {
 
 	}
 
+	
+	/*------------------------------------------------------------------
+	 * CONSTRUCTOR SINGLETON*/
 	public static SistemaSolar getSistemaSolar() {
 		if (INSTANCE == null) {
 			INSTANCE = new SistemaSolar();
@@ -25,10 +30,16 @@ public final class SistemaSolar {
 		return INSTANCE;
 	}
 	
+	
+	/*------------------------------------------------------------------
+	 * ARREGLO DE PLANETAS*/
 	public Planeta getPlaneta(int n) {
 		return planet[n];
 	}
 	
+	
+	/*------------------------------------------------------------------
+	 * AGREGAR UN PLANETA*/
 	public boolean addPlanet(Planeta planeta) {
 		if (indice >= PLANETAS) {
 			return false;
@@ -38,6 +49,9 @@ public final class SistemaSolar {
 		return true;
 	}
 
+	
+	/*------------------------------------------------------------------
+	 * MOSTRAR PLANETAS*/
 	public void mostrarPlanetas() {
 		for (int i = 0; i < PLANETAS; i++) {
 			System.out.println(planet[i].toString());
