@@ -4,23 +4,23 @@ package sistemaSolar;
 
 import planeta.Planet;
 
-public final class SolarSystem {
+public final class SistemaSolar {
 	// el sistema solar tiene 8 planetas
 	private final int PLANETAS = 8;
 	// el sistema solar es singleton, por lo tanto no se puede instanciar mas de una vez
-	private static SolarSystem INSTANCE;
+	private static SistemaSolar INSTANCE;
 	// creamos un vector de planetas vacio
 	private Planet[] planet = new Planet[PLANETAS];
 	// creamos un indice vacio
 	private int indice = 0;
 
-	private SolarSystem() {
+	private SistemaSolar() {
 
 	}
 
-	public static SolarSystem getSolarSystem() {
+	public static SistemaSolar getSistemaSolar() {
 		if (INSTANCE == null) {
-			INSTANCE = new SolarSystem();
+			INSTANCE = new SistemaSolar();
 		}
 		return INSTANCE;
 	}

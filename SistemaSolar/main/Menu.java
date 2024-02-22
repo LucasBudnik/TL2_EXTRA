@@ -3,13 +3,13 @@ package main;
 import java.util.Scanner;
 
 import planeta.Planet;
-import sistemaSolar.SolarSystem;
+import sistemaSolar.SistemaSolar;
 import telescopio.Telescopio;
 
 public class Menu {
 	/*------------------------------------------------------------------
 	 * Menu Principal*/
-	public static void menu(SolarSystem s) {
+	public static void menu(SistemaSolar s) {
 		int n = 0;
 		Scanner in = new Scanner(System.in);
 		do {
@@ -39,7 +39,7 @@ public class Menu {
 
 	/*------------------------------------------------------------------
 	 * Seccion Telescopio*/
-	public static void menu2(Scanner in, SolarSystem s) {
+	public static void menu2(Scanner in, SistemaSolar s) {
 		int n1;
 		Planet p = new Planet();
 		do {
@@ -71,7 +71,7 @@ public class Menu {
 
 	/*------------------------------------------------------------------
 	 * Seleccion de Planeta*/
-	public static Planet MenuPlanet(Scanner in, SolarSystem s) {
+	public static Planet MenuPlanet(Scanner in, SistemaSolar s) {
 		int n2;
 		do {
 			System.out.println("selecciones planeta\n" + "0:MERCURIO,\n" + "1:VENUS\n" + "2:MARTE\n" + "3:TIERRA\n"

@@ -1,6 +1,6 @@
 package planeta;
 
-public enum TipoPlaneta {
+public enum Tipo {
 	ROCOSO,
 	GASEOSO
 }
