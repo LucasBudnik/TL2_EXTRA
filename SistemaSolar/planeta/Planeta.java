@@ -1,17 +1,17 @@
 package planeta;
 
-public class Planet {
+public class Planeta {
 	private int cantidadDeLunas;
 	private Tipo tipo;
 	private double diametro;
 	private long distancia;
 	private String nombre;
 
-	public Planet() {
+	public Planeta() {
 
 	}
 
-	public Planet(String nombre, int cantidadDeLunas, Tipo tipo, double diametro, long distancia) {
+	public Planeta(String nombre, int cantidadDeLunas, Tipo tipo, double diametro, long distancia) {
 		this.nombre = nombre;
 		this.cantidadDeLunas = cantidadDeLunas;
 		this.diametro = diametro;

@@ -2,7 +2,7 @@
 
 package telescopio;
 
-import planeta.Planet;
+import planeta.Planeta;
 
 public class Telescopio {
 
@@ -19,12 +19,12 @@ public class Telescopio {
 		return telescopio;
 	}
 
-	public static void distanciaPlaneta(Planet p) {
+	public static void distanciaPlaneta(Planeta p) {
 		System.out
 				.println("La Distancia al Sol de " + p.getNombre() + " es de " + p.getDistancia() + " millones de km");
 	}
 
-	public static void tipoPlaneta(Planet p) {
+	public static void tipoPlaneta(Planeta p) {
 		if (p != null) {
 			switch (p.getTipo()) {
 			case ROCOSO:

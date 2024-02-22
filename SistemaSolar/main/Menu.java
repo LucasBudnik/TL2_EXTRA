@@ -2,7 +2,7 @@ package main;
 
 import java.util.Scanner;
 
-import planeta.Planet;
+import planeta.Planeta;
 import sistemaSolar.SistemaSolar;
 import telescopio.Telescopio;
 
@@ -41,7 +41,7 @@ public class Menu {
 	 * Seccion Telescopio*/
 	public static void menuTelescopio(Scanner in, SistemaSolar s) {
 		int n1;
-		Planet p = new Planet();
+		Planeta p = new Planeta();
 		do {
 			System.out
 					.println("0: Salir.\n" + "1: Calcular La Distancia Planeta.\n" + "2: Indicar el tipo de planeta.");
@@ -71,7 +71,7 @@ public class Menu {
 
 	/*------------------------------------------------------------------
 	 * Seleccion de Planeta*/
-	public static Planet MenuPlanetas(Scanner in, SistemaSolar s) {
+	public static Planeta MenuPlanetas(Scanner in, SistemaSolar s) {
 		int n2;
 		do {
 			System.out.println("selecciones planeta\n" + "0:MERCURIO,\n" + "1:VENUS\n" + "2:MARTE\n" + "3:TIERRA\n"
