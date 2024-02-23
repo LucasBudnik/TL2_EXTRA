@@ -13,17 +13,23 @@ public class Jugador {
 
 	}
 
-	public Jugador(Posicion[] posiciones) {
-		if (posiciones.length > POSICIONES) {
-			this.indice = this.POSICIONES;
-			for (int i = 0; i < POSICIONES; i++)
-				this.posicion[i] = posiciones[i];
-		} else {
-			for (int i = 0; i < posiciones.length; i++)
-				this.posicion[i] = posiciones[i];
-			this.indice = posiciones.length;
-		}
+//	public Jugador(Posicion[] posiciones) {
+//		if (posiciones.length > POSICIONES) {
+//			this.indice = this.POSICIONES;
+//			for (int i = 0; i < POSICIONES; i++)
+//				this.posicion[i] = posiciones[i];
+//		} else {
+//			for (int i = 0; i < posiciones.length; i++)
+//				this.posicion[i] = posiciones[i];
+//			this.indice = posiciones.length;
+//		}
+//
+//	}
 
+	public Jugador(Posicion p1, Posicion p2) {
+		this.posicion[0] = p1;
+		this.posicion[1] = p2;
+		this.indice = 2;
 	}
 
 	/*---------------------------------------------------------------------

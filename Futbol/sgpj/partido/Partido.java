@@ -1,51 +1,58 @@
 package sgpj.partido;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import sgpj.equipos.Equipo;
 import sgpj.equipos.Jugador;
 import sgpj.posiciones.Posicion;
 
 public class Partido {
+
+	/*---------------------------------------------------------------------
+	 * */
 	public static boolean cumpleLaCantidadDeJugadores(Equipo e) {
 		return e.calcularJugadore() >= 5;
 	}
 
+	/*---------------------------------------------------------------------
+	 * */
 	public static boolean cumplenPosiciones(Equipo e) {
-		Posicion p;
-		Posicion[] pos = { Posicion.ARQUERO, Posicion.DEFENSOR, Posicion.DEFENSOR, Posicion.MEDIOCAMPO,
-				Posicion.DELANTERO };
+		List<Posicion> l = new ArrayList<Posicion>();
+
+		l.add(Posicion.ARQUERO);
+		l.add(Posicion.DEFENSOR);
+		l.add(Posicion.DEFENSOR);
+		l.add(Posicion.MEDIOCAMPO);
+		l.add(Posicion.DELANTERO);
+
 		for (Jugador j : e.getJugadores()) {
-			p = seEncuentra(j.getPosicion(0), pos);
-			if (p == null) {
-				p = seEncuentra(j.getPosicion(1), pos);
+			if (l.contains(j.getPosicion(0))) {
+				l.remove(j.getPosicion(0));
+			} else {
+				if (l.contains(j.getPosicion(1)))
+					l.remove(j.getPosicion(1));
 			}
-			if (p != null) {
-				eliminarPosicion(p, pos);
-				p = null;
-			}
+			if (l.isEmpty())
+				return true;
 		}
-		if(pos.length == 0) return true;
-		else return false;
-	}
 
-	public static Posicion seEncuentra(Posicion p1, Posicion[] p2) {
-		int i = 0;
-		while (i < p2.length && !p1.equals(p2[i])) {
-			i++;
-		}
-		if (p1.equals(p2[i]))
-			return p1;
-		return null;
+		return false;
 
 	}
 
+	/*---------------------------------------------------------------------
+	 * */
+
+	/*---------------------------------------------------------------------
+	 * */
 	public static void eliminarPosicion(Posicion p, Posicion[] p1) {
 		int i = 0;
 		while (i < p1.length && !p.equals(p1[i]))
 			i++;
-		for(int j = i+1; j < (p1.length-1); j++) {
-			p1[j-1]= p1[j];	
+		for (int j = i + 1; j < (p1.length - 1); j++) {
+			p1[j - 1] = p1[j];
 		}
 		p1 = Arrays.copyOf(p1, p1.length - 1);
 	}
