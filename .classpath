@@ -9,5 +9,6 @@
 	<classpathentry kind="src" path="Ejercicio2"/>
 	<classpathentry kind="src" path="SistemaSolar"/>
 	<classpathentry kind="src" path="Futbol"/>
+	<classpathentry kind="src" path="Parcial2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
