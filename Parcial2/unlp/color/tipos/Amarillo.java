@@ -3,34 +3,21 @@ package unlp.color.tipos;
 import unlp.color.Color;
 
 import unlp.color.Primario;
-import unlp.enums.Intensidad;
 import unlp.enums.Tipo;
 
 public class Amarillo extends Primario {
-	/*---------------------------------------------
-	 * VARIABLES DE INSTANCIA
-	 */
-	private Tipo tipo;
-	private Intensidad intensidad;
+
+	public Amarillo() {
+
+	}
 
 	/*---------------------------------------------
-	 * GETTERS && SETTERS
+	 * GETTERS
 	 */
-	@Override
 	public Tipo getTipo() {
-		return this.tipo;
+		return Tipo.CALIDO;
 	}
 
-	@Override
-	public Intensidad getIntensidad() {
-		return this.intensidad;
-	}
-
-	@Override
-	public void setIntensidad(Intensidad intensidad) {
-		this.intensidad = intensidad;
-	}
-	
 	/*---------------------------------------------
 	 * COMBINAR
 	 */
@@ -38,7 +25,7 @@ public class Amarillo extends Primario {
 	public Color combinarCon(Primario color) {
 		return color.combinarConAmarillo();
 	}
-	
+
 	@Override
 	public Color combinarConAzul() {
 		return new Verde();
@@ -53,11 +40,19 @@ public class Amarillo extends Primario {
 	public Color combinarConAmarillo() {
 		return new Amarillo();
 	}
+
 	/*---------------------------------------------
 	 * COMPLEMENTARIO
 	 */
 	@Override
 	public Color complementario() {
 		return new Violeta();
+	}
+	/*---------------------------------------------
+	 * NOMBRE
+	 */
+	@Override
+	public String getNombre() {
+		return "Amarillo";
 	}
 }

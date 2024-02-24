@@ -2,35 +2,20 @@ package unlp.color.tipos;
 
 import unlp.color.Color;
 import unlp.color.Secundario;
-import unlp.enums.Intensidad;
 import unlp.enums.Tipo;
 
+
 public class Violeta extends Secundario {
-
+	public Violeta() {
+		
+	}
 	/*---------------------------------------------
-	 * VARIABLES DE INSTANCIA
+	 * GETTERS
 	 */
-	private Tipo tipo;
-	private Intensidad intensidad;
-
-	/*---------------------------------------------
-	 * GETTERS && SETTERS
-	 */
-	@Override
 	public Tipo getTipo() {
-		return this.tipo;
+		return Tipo.FRIO;
 	}
 
-	@Override
-	public Intensidad getIntensidad() {
-		return this.intensidad;
-	}
-
-	@Override
-	public void setIntensidad(Intensidad intensidad) {
-		this.intensidad = intensidad;
-	}
-	
 
 	/*---------------------------------------------
 	 * COMPLEMENTARIO
@@ -38,5 +23,12 @@ public class Violeta extends Secundario {
 	@Override
 	public Color complementario() {
 		return new Amarillo();
+	}
+	/*---------------------------------------------
+	 * NOMBRE
+	 */
+	@Override
+	public String getNombre() {
+		return "Violeta";
 	}
 }

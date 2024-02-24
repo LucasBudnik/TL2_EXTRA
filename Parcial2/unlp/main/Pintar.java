@@ -14,7 +14,7 @@ public class Pintar {
 	public static List<Color> filtrarFrios(List<Color> lcolor) {
 		List<Color> l = new ArrayList<>();
 		for (Color c : lcolor) {
-			if (c.getTipo() == Tipo.FRIO) {
+			if (c.getTipo().equals(Tipo.FRIO)) {
 				l.add(c);
 			}
 		}
@@ -24,7 +24,7 @@ public class Pintar {
 	public static List<Color> filtrarCalidos(List<Color> lcolor) {
 		List<Color> l = new ArrayList<>();
 		for (Color c : lcolor) {
-			if (c.getTipo() != Tipo.FRIO) {
+			if (!c.getTipo().equals(Tipo.FRIO)) {
 				l.add(c);
 			}
 		}
@@ -37,7 +37,6 @@ public class Pintar {
 			l.add(c.complementario());
 		}
 		return l;
-	}
+	}	
 
-//	public static List<Color> listarComplementarios(List<Color> lcolor);
 }

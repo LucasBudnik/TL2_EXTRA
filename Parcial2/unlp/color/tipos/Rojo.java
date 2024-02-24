@@ -2,32 +2,17 @@ package unlp.color.tipos;
 
 import unlp.color.Color;
 import unlp.color.Primario;
-import unlp.enums.Intensidad;
 import unlp.enums.Tipo;
 
 public class Rojo extends Primario {
+	public Rojo() {
+		
+	}
 	/*---------------------------------------------
-	 * VARIABLES DE INSTANCIA
+	 * GETTERS
 	 */
-	private Tipo tipo;
-	private Intensidad intensidad;
-
-	/*---------------------------------------------
-	 * GETTERS && SETTERS
-	 */
-	@Override
 	public Tipo getTipo() {
-		return this.tipo;
-	}
-
-	@Override
-	public Intensidad getIntensidad() {
-		return this.intensidad;
-	}
-
-	@Override
-	public void setIntensidad(Intensidad intensidad) {
-		this.intensidad = intensidad;
+		return Tipo.CALIDO;
 	}
 
 	
@@ -61,6 +46,14 @@ public class Rojo extends Primario {
 	@Override
 	public Color combinarConAmarillo() {
 		return new Naranja();
+	}
+	
+	/*---------------------------------------------
+	 * NOMBRE
+	 */
+	@Override
+	public String getNombre() {
+		return "Rojo";
 	}
 	
 	

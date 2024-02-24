@@ -4,16 +4,20 @@ import unlp.enums.*;
 
 public abstract class Color {
 
-	public Intensidad intensidad;
+	private Intensidad intensidad;
+	
 
-	public Tipo tipo;
+	public Intensidad getIntensidad() {
+		return intensidad;
+	}
 
+	public void setIntensidad(Intensidad intensidad) {
+		this.intensidad = intensidad;
+	}
+	
+	public abstract Tipo getTipo() ;
 
-	public abstract Tipo getTipo();
-
-	public abstract Intensidad getIntensidad();
-
-	public abstract void setIntensidad(Intensidad intensidad);
+	public abstract String getNombre();
 	
 	public abstract Color complementario();
 }
