@@ -27,6 +27,7 @@ public class Rojo extends Primario {
 	/*---------------------------------------------
 	 * COMBINAR
 	 */
+	// double dispatching
 	@Override
 	public Color combinarCon(Primario color) {
 		return color.combinarConRojo();
